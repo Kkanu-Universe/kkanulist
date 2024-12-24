@@ -1,6 +1,8 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
+import { useAtomValue } from 'jotai';
 
+import { isDarkModeAtom } from '@store/commons/darkmode';
 import MEDIA_QUERY from '@util/mediaQuery.util';
 
 // import Header from './Header';
@@ -16,8 +18,7 @@ const LayoutWrap = styled.main`
 
 const MainLayoutWrap = styled.div`
   display: flex;
-  background-color: var(--color-black);
-  margin-left: ${300 / 16}rem;
+  background-color: var(--color-gray-0);
   width: 100%;
   height: 100vh;
   justify-content: space-between;
@@ -44,8 +45,10 @@ const MainSectionWrap = styled.div`
 `;
 
 function Layout({ children }: LayoutProps) {
+  const isDarkMode = useAtomValue(isDarkModeAtom);
+
   return (
-    <LayoutWrap>
+    <LayoutWrap className={isDarkMode ? 'darkmode' : ''}>
       {/* <Header /> */}
       <MainLayoutWrap>
         <MainSectionWrap>{children}</MainSectionWrap>

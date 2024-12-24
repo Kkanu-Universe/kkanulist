@@ -7,7 +7,7 @@ import Button from '@atom/Button';
 import TextMsg from '@atom/Input/TextMsg';
 import type { TextWarnMsgProps } from '@atom/Input/TextMsg';
 
-import { proxyBtnLoad } from '@store/btnLoading';
+import { proxyBtnLoad } from '@store/commons/btnLoading';
 
 interface LoadingSpinnerProps {
   size?: number;

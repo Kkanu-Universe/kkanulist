@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import Label from '@atom/Label';
 
-export interface RadioStyleProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+export interface IRadioStyleProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-export interface RadioProps extends RadioStyleProps {
+export interface IRadioProps extends IRadioStyleProps {
   label: string;
   htmlFor: string;
 }
@@ -22,7 +22,7 @@ export const RadioWrap = styled.input`
   margin-top: 0;
 `;
 
-function Radio({ label, htmlFor, ...rest }: RadioProps) {
+function Radio({ label, htmlFor, ...rest }: IRadioProps) {
   return (
     <RadioContainer>
       <Label htmlFor={htmlFor}>{label}</Label>

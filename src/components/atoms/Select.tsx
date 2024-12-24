@@ -1,7 +1,7 @@
 import React, { useId, memo } from 'react';
 import styled from 'styled-components';
 
-export interface SelectProps extends React.HTMLAttributes<HTMLSelectElement> {
+export interface ISelectProps extends React.HTMLAttributes<HTMLSelectElement> {
   options: { text: string; value: any }[];
 }
 
@@ -16,7 +16,7 @@ const SelectWrap = styled.select`
   }
 `;
 
-function Select({ options, ...rest }: SelectProps) {
+function Select({ options, ...rest }: ISelectProps) {
   const uuid = useId();
 
   return (

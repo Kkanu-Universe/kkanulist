@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
-interface TextStyleProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface ITextStyleProps extends React.InputHTMLAttributes<HTMLInputElement> {
   maxWidth?: string;
 }
 
-export const TextWrap = styled.input<TextStyleProps>`
+export const TextWrap = styled.input<ITextStyleProps>`
   width: 100%;
   max-width: ${({ maxWidth }) => maxWidth || 'calc(100% - calc(14rem / 16))'};
   height: 35px;
@@ -13,9 +13,9 @@ export const TextWrap = styled.input<TextStyleProps>`
   border: 1px solid var(--color-primary-light);
 `;
 
-export interface TextProps extends TextStyleProps {}
+export interface ITextProps extends ITextStyleProps {}
 
-function Text({ value, ...rest }: TextProps) {
+function Text({ value, ...rest }: ITextProps) {
   return <TextWrap {...rest} value={value || ''} />;
 }
 

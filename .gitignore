@@ -7,3 +7,5 @@ build
 
 .*.env
 .git
+.swc
+.vscode

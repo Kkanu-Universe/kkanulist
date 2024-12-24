@@ -5,9 +5,9 @@ const ImgWrap = styled.img`
   width: 100%;
 `;
 
-interface ImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
+interface IImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
 
-function Image(props: ImgProps) {
+function Image(props: IImgProps) {
   return <ImgWrap {...props} />;
 }
 

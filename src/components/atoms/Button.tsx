@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
-export interface BtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IBtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode | string;
 }
 
@@ -13,7 +13,7 @@ export const BtnWrap = styled.button`
   padding: calc(10rem / 16);
 `;
 
-function Button({ type = 'button', children, onClick, ...rest }: BtnProps) {
+function Button({ type = 'button', children, onClick, ...rest }: IBtnProps) {
   return (
     <BtnWrap type={type} onClick={onClick} {...rest}>
       {children}

@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 import { FiSquare, FiCheckSquare } from 'react-icons/fi';
 
-export interface CheckProps {
+export interface ICheckProps {
   isCheck: boolean;
   onClick: () => void;
 }
@@ -18,7 +18,7 @@ const CheckContainer = styled.div`
   }
 `;
 
-function Check({ onClick, isCheck = false }: Omit<CheckProps, 'type'>) {
+function Check({ onClick, isCheck = false }: Omit<ICheckProps, 'type'>) {
   return (
     <CheckContainer>
       {isCheck ? (

@@ -1,16 +1,16 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
-export interface LabelStyleProps extends React.LabelHTMLAttributes<HTMLLabelElement> {}
+export interface ILabelStyleProps extends React.LabelHTMLAttributes<HTMLLabelElement> {}
 
-export interface LabelProps extends LabelStyleProps {}
+export interface ILabelProps extends ILabelStyleProps {}
 
-const LabelWrap = styled.label<LabelStyleProps>`
+const LabelWrap = styled.label<ILabelStyleProps>`
   color: var(--color-white-20);
   font-size: 14px;
 `;
 
-function Label({ children, ...rest }: LabelProps) {
+function Label({ children, ...rest }: ILabelProps) {
   return <LabelWrap {...rest}>{children}</LabelWrap>;
 }
 

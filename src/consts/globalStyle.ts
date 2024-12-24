@@ -96,6 +96,33 @@ export const GlobalColorStyle = createGlobalStyle`
     --color-skeleton-dark: #A5A5A580;
   }
 
+  .darkmode {
+    --color-gray-0: #212529;
+    --color-gray-1: #343a40;
+    --color-gray-2: #495057;
+    --color-gray-3: #868e96;
+    --color-gray-4: #adb5bd;
+    --color-gray-5: #ced4da;
+    --color-gray-6: #dee2e6;
+    --color-gray-7: #e9ecef;
+    --color-gray-8: #f1f3f5;
+    --color-gray-9: #f8f9fa;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .darkmode {
+      --color-gray-0: #212529;
+      --color-gray-1: #343a40;
+      --color-gray-2: #495057;
+      --color-gray-3: #868e96;
+      --color-gray-4: #adb5bd;
+      --color-gray-5: #ced4da;
+      --color-gray-6: #dee2e6;
+      --color-gray-7: #e9ecef;
+      --color-gray-8: #f1f3f5;
+      --color-gray-9: #f8f9fa;
+    }
+  }
 `;
 
 export const GlobalCommonStyle = createGlobalStyle`
@@ -103,11 +130,18 @@ export const GlobalCommonStyle = createGlobalStyle`
     width: 100%;
     min-width: 100%;
     height: 100%;
-    font-family: 'Regular';
+    font-family: 'Thin', 'ExtraLight', 'Light', 'Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold', 'Heavy';
     background-color: var(--color-gray-0);
     color: var(--color-default);
     margin: 0;
     padding: 0;
+
+    /* Disabled Draggable */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
 
   div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
@@ -121,6 +155,14 @@ export const GlobalCommonStyle = createGlobalStyle`
     color: var(--color-gray-9);
     font-family: 'Regular';
     user-select: none;
+    /* scroll bar invisible */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* scroll bar invisible */
+  *::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
   }
 
   *, *::after, *::before {
@@ -168,5 +210,75 @@ export const GlobalCommonStyle = createGlobalStyle`
 
   input::placeholder {
     color: var(--color-gray-3);
+  }
+
+  /*
+   * =====================
+   *     HEADING STYLE
+   * =====================
+   */
+  h1, h2, h3 {
+    letter-spacing: calc(-0.4rem / 16);
+  }
+
+  h4, h5, h6, p {
+    letter-spacing: calc(-0.2rem / 16);
+  }
+
+  .h0 {
+    font-size: calc(50rem / 16);
+    line-height: calc(64rem / 16);
+  }
+
+  h1 {
+    font-size: calc(38rem / 16);
+    line-height: calc(49rem / 16);
+  }
+
+  h2 {
+    font-size: calc(28rem / 16);
+    line-height: calc(36rem / 16);
+  }
+
+  h3 {
+    font-size: calc(22rem / 16);
+    line-height: calc(33rem / 16);
+  }
+
+  h4 {
+    font-size: calc(22rem / 16);
+    line-height: calc(33rem / 16);
+  }
+
+  h5 {
+    font-size: calc(16rem /16);
+    line-height: calc(24rem / 16);
+  }
+
+  h6 {
+    font-size: calc(14rem / 16);
+    line-height: calc(21rem / 16);
+  }
+
+  p {
+    font-size: calc(12rem / 16);
+    line-height: calc(18rem / 16);
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: calc(32rem / 16);
+      line-height: calc(38rem / 16);
+    }
+
+    h2 {
+      font-size: calc(24rem / 16);
+      line-height: calc(34rem / 16);
+    }
+
+    h3 {
+      font-size: calc(21rem / 16);
+      line-height: calc(30rem / 16);
+    }
   }
 `;

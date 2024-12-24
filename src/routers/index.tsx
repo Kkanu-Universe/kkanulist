@@ -9,26 +9,12 @@ import routers from './index.router';
 const App = () => (
   <BrowserRouter>
     <Routes>
-      {routers.map(({ comp: Comp, childs, ...rest }) => (
-        <Route
-          {...rest}
-          element={
-            <Layout>
-              <Comp />
-            </Layout>
-          }
-        >
+      {routers.map(({ comp: Comp, childs, key, ...rest }) => (
+        <Route key={key} {...rest} element={<Layout children={<Comp />} />}>
           {childs &&
             childs.length > 0 &&
-            childs.map(({ comp: ChildComp, ...child }) => (
-              <Route
-                {...child}
-                element={
-                  <Layout>
-                    <ChildComp />
-                  </Layout>
-                }
-              />
+            childs.map(({ comp: ChildComp, key: childKey, ...child }) => (
+              <Route key={childKey} {...child} element={<Layout children={<ChildComp />} />} />
             ))}
         </Route>
       ))}

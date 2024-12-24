@@ -3,7 +3,7 @@ import { useSnapshot } from 'valtio';
 
 import { LoadingSpinner } from '@block/LoadingBtn';
 
-import { proxyBtnLoad } from '@store/btnLoading';
+import { proxyBtnLoad } from '@/src/stores/common/btnLoading';
 
 import { ModalFooterWrap, ModalFooterBtn } from './styles';
 

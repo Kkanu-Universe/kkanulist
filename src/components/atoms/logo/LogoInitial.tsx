@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-
 function InitialLogo() {
   return (
     <svg
