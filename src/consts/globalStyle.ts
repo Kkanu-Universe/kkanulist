@@ -100,6 +100,11 @@ export const GlobalColorStyle = createGlobalStyle`
     --space-default: calc(16rem / 16);
 
     --gap-default: calc(1rem / 16);
+
+    --icon-size-lg: calc(24rem / 16);
+    --icon-size-default: calc(20rem / 16);
+    --icon-size-sm: calc(16rem / 16);
+    --icon-size-xs: calc(12rem / 16);
   }
 
   .darkmode {
@@ -197,6 +202,11 @@ export const GlobalCommonStyle = createGlobalStyle`
 
   button, a, input[type=button], input[type=submit] {
     cursor: pointer;
+  }
+
+  svg {
+    width: var(--icon-size-default);
+    height: var(--icon-size-default);
   }
 
   label {

@@ -1,7 +1,7 @@
 export interface ISwitchProps {
   id: string;
   checked: boolean;
-  text: string;
+  text: React.ReactNode;
   onChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
 };
 

@@ -1,19 +1,38 @@
+import { useState } from 'react';
+
 import DarkModeSwitch from '@block/collections/DarkModeSwitch';
 import DropDown from '@block/collections/DropDown';
+import Switch from '@block/collections/Switch';
+import Checkbox from '@block/collections/Checkbox';
+import Accordion from '@block/collections/Accordion';
 
 // ? 컴포넌트 모음집
-const Components = () => (
-  <div>
-    <DarkModeSwitch />
-    <DropDown options={
+const Components = () => {
+  const [isCheck, setIsCheck] = useState(false);
+
+  const onSetIsCheck = () => setIsCheck(!isCheck);
+
+  return (
+    <div>
+      <Switch id='switch' checked={true} text='aa' onChange={() => {}} />
+      <DarkModeSwitch />
+      <Checkbox
+        checkProps={{ checked: isCheck, onChange: onSetIsCheck, id: 'checkbox' }}
+        labelProps={{ htmlFor: 'checkbox', children: 'Checkbox' }}
+      />
+      <div style={{ maxWidth: '500px'}}>
+        <Accordion />
+      </div>
+      <DropDown options={
       [{label: 'home', link: '/index'},
         {label: 'user', link: '/user'},
         {label: 'kanu', link: '/kanu'},
         {label: 'kkangu', link: '/kkangu'}
       ]
     } />
-  </div>
-)
+    </div>
+  );
+}
 
 export default Components;
 

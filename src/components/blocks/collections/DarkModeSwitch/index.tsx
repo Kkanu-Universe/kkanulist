@@ -1,4 +1,6 @@
 import { useAtom } from 'jotai';
+import { MoonIcon } from '@heroicons/react/24/outline';
+import { SunIcon } from '@heroicons/react/24/solid';
 
 import Switch from '@block/collections/Switch';
 import { isDarkModeAtom } from '@store/commons/darkmode';
@@ -16,7 +18,7 @@ function DarkModeSwitch() {
 
   return (
     <DarkModeSwitchConatiner>
-      <Switch id='darkmode' checked={isDarkMode} text={isDarkMode ? 'Dark' : 'Light'} onChange={onChangeDarkMode} />
+      <Switch id='darkmode' checked={isDarkMode} text={isDarkMode ? <MoonIcon /> : <SunIcon />} onChange={onChangeDarkMode} />
     </DarkModeSwitchConatiner>
   );
 };

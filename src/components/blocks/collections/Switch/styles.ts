@@ -36,6 +36,8 @@ export const SwitchInput = styled.input`
 `;
 
 export const SwitchText = styled.div<ISwitchTextStyle>`
+  display: flex;
+  align-items: center;
   margin: ${({ checked }) => checked === 'on' ? '0 26px 0 4px;' : '0 4px 0 26px;'};
   cursor: pointer;
   z-index: 1;
