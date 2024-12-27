@@ -11,8 +11,9 @@ export const SwitchWrap = styled.label`
   position: relative;
   display: flex;
   align-items: center;
-  border: 1px solid var(--color-gray-6);
+  border: 1px solid var(--color-gray-4);
   border-radius: 50px;
+  background-color: var(--color-gray-1);
   height: 28px;
   padding: 2px 1px;
   cursor: pointer;
@@ -23,7 +24,7 @@ export const SwitchInput = styled.input`
   &:not(:checked) {
     left: 0;
   }
-  left: 38px;
+  left: calc(100% - 26px);
   appearance: none;
   width: 20px;
   height: 20px;
