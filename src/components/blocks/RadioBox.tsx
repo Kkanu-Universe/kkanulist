@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
-import type { RadioStyleProps } from '@atom/Input/Radio';
+import type { IRadioStyleProps } from '@atom/Input/Radio';
 import Radio from '@atom/Input/Radio';
-import type { TextWarnMsgProps } from '@atom/Input/TextMsg';
+import type { ITextWarnMsgProps } from '@atom/Input/TextMsg';
 import TextMsg from '@atom/Input/TextMsg';
 
 type RadioData = {
@@ -15,7 +15,7 @@ type RadioData = {
   key: any;
 };
 
-interface RadioBoxProps extends RadioStyleProps, TextWarnMsgProps {
+interface RadioBoxProps extends IRadioStyleProps, ITextWarnMsgProps {
   title: string;
   datas: RadioData[];
 }

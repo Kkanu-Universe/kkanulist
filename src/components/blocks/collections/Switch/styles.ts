@@ -23,7 +23,7 @@ export const SwitchInput = styled.input`
   &:not(:checked) {
     left: 0;
   }
-  left: 36px;
+  left: 38px;
   appearance: none;
   width: 20px;
   height: 20px;

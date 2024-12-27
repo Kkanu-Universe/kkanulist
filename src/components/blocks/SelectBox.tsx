@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 import Label from '@atom/Label';
 import Select from '@atom/Select';
-import type { SelectProps } from '@atom/Select';
-import type { TextWarnMsgProps } from '@atom/Input/TextMsg';
+import type { ISelectProps } from '@atom/Select';
+import type { ITextWarnMsgProps } from '@atom/Input/TextMsg';
 import TextMsg from '@atom/Input/TextMsg';
 
-interface SelectBoxWrapProps extends SelectProps, TextWarnMsgProps {
+interface SelectBoxWrapProps extends ISelectProps, ITextWarnMsgProps {
   htmlFor?: string;
   label?: string;
 }

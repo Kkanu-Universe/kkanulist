@@ -2,11 +2,11 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 
 import SectionTitle from './SectionTitle';
-import type { SectionTitleProps } from './SectionTitle';
+import type { ISectionTitleProps } from './SectionTitle';
 import SectionContainer from './SectionContainer';
-import type { SectionContainerProps } from './SectionContainer';
+import type { ISectionContainerProps } from './SectionContainer';
 
-export interface SectionProps extends SectionTitleProps, SectionContainerProps {}
+export interface SectionProps extends ISectionTitleProps, ISectionContainerProps {}
 
 const SectionWrap = styled.section`
   border-radius: calc(10rem / 16);

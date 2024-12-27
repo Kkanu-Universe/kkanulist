@@ -2,11 +2,11 @@ import React, { memo } from 'react';
 
 import { SectionTitleWrap } from './styles';
 
-export interface SectionTitleProps {
+export interface ISectionTitleProps {
   title?: React.ReactNode | string;
 }
 
-function SectionTitle({ title }: SectionTitleProps) {
+function SectionTitle({ title }: ISectionTitleProps) {
   return <SectionTitleWrap>{title}</SectionTitleWrap>;
 }
 

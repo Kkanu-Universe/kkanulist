@@ -1,19 +1,19 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
-import { useSnapshot } from 'valtio';
+import { useAtom } from 'jotai';
 
-import type { BtnProps } from '@atom/Button';
+import type { IBtnProps } from '@atom/Button';
 import Button from '@atom/Button';
 import TextMsg from '@atom/Input/TextMsg';
-import type { TextWarnMsgProps } from '@atom/Input/TextMsg';
+import type { ITextWarnMsgProps } from '@atom/Input/TextMsg';
 
-import { proxyBtnLoad } from '@store/commons/btnLoading';
+import { btnLoading } from '@store/commons/btnLoading';
 
 interface LoadingSpinnerProps {
   size?: number;
 }
 
-interface LoadingBtnProps extends BtnProps, LoadingSpinnerProps, TextWarnMsgProps {
+interface LoadingBtnProps extends IBtnProps, LoadingSpinnerProps, ITextWarnMsgProps {
   child?: React.ReactNode | string;
 }
 
@@ -44,7 +44,7 @@ export const LoadingSpinner = styled.span<LoadingSpinnerProps>`
 const LoadingBtnWrap = styled.div``;
 
 function LoadingBtn({ msg, msgColor, child, size = 13, ...rest }: LoadingBtnProps) {
-  const { isLoading } = useSnapshot(proxyBtnLoad);
+  const [isLoading, setIsLoading] = useAtom(btnLoading);
 
   return (
     <LoadingBtnWrap>

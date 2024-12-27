@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
-import { useSnapshot } from 'valtio';
+import { useAtom } from 'jotai';
 
 import { LoadingSpinner } from '@block/LoadingBtn';
 
-import { proxyBtnLoad } from '@/src/stores/common/btnLoading';
+import { btnLoading } from '@store/commons/btnLoading';
 
 import { ModalFooterWrap, ModalFooterBtn } from './styles';
 
@@ -28,7 +28,7 @@ function ModalFooter({
   denyText = '거부',
   onDeny = () => {},
 }: ModalFooterProps) {
-  const { isLoading } = useSnapshot(proxyBtnLoad);
+  const [isLoading, setIsLoading] = useAtom(btnLoading);
 
   return (
     <ModalFooterWrap>
