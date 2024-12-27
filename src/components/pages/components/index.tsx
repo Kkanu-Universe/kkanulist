@@ -1,9 +1,17 @@
 import DarkModeSwitch from '@block/collections/DarkModeSwitch';
+import DropDown from '@block/collections/DropDown';
 
 // ? 컴포넌트 모음집
 const Components = () => (
   <div>
     <DarkModeSwitch />
+    <DropDown options={
+      [{label: 'home', link: '/index'},
+        {label: 'user', link: '/user'},
+        {label: 'kanu', link: '/kanu'},
+        {label: 'kkangu', link: '/kkangu'}
+      ]
+    } />
   </div>
 )
 

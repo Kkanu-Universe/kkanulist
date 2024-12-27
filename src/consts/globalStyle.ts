@@ -78,7 +78,7 @@ export const GlobalColorStyle = createGlobalStyle`
     --color-red: #ff0000;
     --color-green: #00ff00;
     --color-blue: #0000ff;
-    --color-midnight: 302e41;
+    --color-midnight: #302e41;
     --color-midnight-purple: #342048;
 
     --color-gray-0: #f8f9fa;
