@@ -98,6 +98,8 @@ export const GlobalColorStyle = createGlobalStyle`
     --border-radius-default: calc(4rem / 16);
     
     --space-default: calc(16rem / 16);
+
+    --gap-default: calc(1rem / 16);
   }
 
   .darkmode {
