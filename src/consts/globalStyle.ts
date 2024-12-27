@@ -94,6 +94,10 @@ export const GlobalColorStyle = createGlobalStyle`
 
     --color-skeleton: #A5A5A54D;
     --color-skeleton-dark: #A5A5A580;
+
+    --border-radius-default: calc(4rem / 16);
+    
+    --space-default: calc(16rem / 16);
   }
 
   .darkmode {
@@ -205,7 +209,7 @@ export const GlobalCommonStyle = createGlobalStyle`
     border: none !important;
     background-color: var(--color-white);
     color: var(--color-gray-9);
-    border-radius: calc(4rem / 16);
+    border-radius: var(--border-radius-default);
   }
 
   input::placeholder {
