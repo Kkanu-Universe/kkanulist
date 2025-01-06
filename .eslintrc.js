@@ -3,18 +3,21 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   env: {
     browser: true,
+    es2020: true,
     node: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:jsx-a11y/recommended',
     'airbnb-base',
-    'plugin:react/recommended',
-    'plugin:import/typescript',
+    'next',
     'plugin:@typescript-eslint/eslint-recommended',
+    'next/core-web-vitals',
+    'plugin:import/typescript',
   ],
   parserOptions: {
     ecmaVersion: 2022,
+    ecmaFeature: {
+      jsx: true,
+    },
     sourceType: 'module',
     project: './tsconfig.json',
     tsconfigRootDir: './',
@@ -41,7 +44,7 @@ module.exports = {
     'operator-linebreak': 0,
     'no-param-reassign': 'off',
   },
-  ignorePatterns: ['.eslintrc.js', 'webpack.*.js'],
+  ignorePatterns: ['.eslintrc.js', 'next.config.js', 'jest.config.js', 'jest.setup.js'],
   settings: {
     'import/resolver': {
       node: {

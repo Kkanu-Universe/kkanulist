@@ -24,25 +24,42 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "isolatedModules": true,
     "noImplicitAny": false,
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@public/*": ["./public/*"],
-      "@src/*": ["./src/*"],
-      "@comp/*": ["./src/components/*"],
-      "@atom/*": ["./src/components/atoms/*"],
-      "@block/*": ["./src/components/blocks/*"],
-      "@page/*": ["./src/components/pages/*"],
-      "@store/*": ["./src/stores/*"],
-      "@router/*": ["./src/routers/*"],
-      "@hook/*": ["./src/hooks/*"],
-      "@util/*": ["./src/utils/*"],
-      "@const/*": ["./src/consts/*"]
-    }
+      "@comp/*": ["./components/*"],
+      "@atom/*": ["./components/atoms/*"],
+      "@block/*": ["./components/blocks/*"],
+      "@utility/*": ["./components/utilities/*"],
+      "@page/*": ["./pages/*"],
+      "@store/*": ["./stores/*"],
+      "@router/*": ["./routers/*"],
+      "@hook/*": ["./hooks/*"],
+      "@util/*": ["./utils/*"],
+      "@const/*": ["./consts/*"],
+      "@lib/*": ["./libs/*"]
+    },
+    "incremental": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "noUncheckedIndexedAccess": true,
+    "outDir": "./dist",
+    "noImplicitReturns": true
   },
-  "include": ["src/**/*", "public"],
   "exclude": ["node_modules"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js",
+    "server.js",
+    "@types/*",
+    "next-i18next.config.js"
+  ]
 }
