@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { BtnWrap } from "@atom/Button";
+import { BtnStyle } from "@atom/Button";
 
 type Options = {
   label: string;
@@ -19,8 +19,8 @@ const DropDownWrap = styled.button`
   }
 `
 
-const Button = styled(BtnWrap)`
-  cursor: pointer;
+const Button = styled.div`
+  ${BtnStyle}
 `
 
 const DropDownContentWrap = styled.div`
@@ -62,7 +62,7 @@ function DropDown({ options , ...rest }: DropdownProps){
       <Button> Dropdown btn </Button>
       <DropDownContentWrap>
         {options.map((option, idx) => (
-            <DropDownContent href={option.link}>{option.label}</DropDownContent>
+            <DropDownContent key={`dropdown-${idx}`} href={option.link}>{option.label}</DropDownContent>
         ))}
       </DropDownContentWrap>
     </DropDownWrap>

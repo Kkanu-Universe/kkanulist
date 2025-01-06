@@ -4,8 +4,6 @@ import { appWithTranslation } from 'next-i18next';
 import { useSetAtom } from 'jotai';
 import { AppProps } from 'next/app';
 
-import nextI18nextConfig from '@/next-i18next.config';
-
 import Layout from '@block/Layout';
 
 import { isDarkModeAtom } from '@store/commons/darkmode';
@@ -14,7 +12,7 @@ import { cookies } from '@util/common.util';
 
 import './_app.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const setIsDarkMode = useSetAtom(isDarkModeAtom);
 
   useEffect(() => {
@@ -39,4 +37,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default appWithTranslation(MyApp, nextI18nextConfig);
+export default appWithTranslation(App);

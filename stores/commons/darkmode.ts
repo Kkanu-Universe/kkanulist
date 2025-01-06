@@ -1,8 +1,14 @@
 import { atom } from 'jotai';
 
-let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-if (localStorage.getItem('color-scheme')) {
-  isDarkMode = localStorage.getItem('color-scheme') === 'dark';
+const getInitialDarkMode = () => {
+  if (typeof window === 'undefined') return false;
+
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const storedScheme = localStorage.getItem('color-scheme');
+
+  if (storedScheme) return storedScheme === 'dark';
+
+  return prefersDarkMode;
 }
 
-export const isDarkModeAtom = atom<boolean>(isDarkMode);
+export const isDarkModeAtom = atom<boolean>(getInitialDarkMode());

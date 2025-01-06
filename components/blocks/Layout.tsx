@@ -51,21 +51,15 @@ export default function Layout({ children }: LayoutProps) {
   const isDarkMode = useAtomValue(isDarkModeAtom);
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <html lang='en'>
-          <body>
-            <LayoutWrap className={isDarkMode ? 'darkmode' : ''}>
-              {/* <Header /> */}
-              <MainLayoutWrap>
-                <MainSectionWrap>{children}</MainSectionWrap>
-                {/* <Footer /> */}
-              </MainLayoutWrap>
-            </LayoutWrap>
-          </body>
-        </html>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <LayoutWrap className={isDarkMode ? 'darkmode' : ''}>
+        {/* <Header /> */}
+        <MainLayoutWrap>
+          <MainSectionWrap>{children}</MainSectionWrap>
+          {/* <Footer /> */}
+        </MainLayoutWrap>
+      </LayoutWrap>
+    </ThemeProvider>
   );
 }
 
