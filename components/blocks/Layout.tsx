@@ -62,4 +62,3 @@ export default function Layout({ children }: LayoutProps) {
     </ThemeProvider>
   );
 }
-

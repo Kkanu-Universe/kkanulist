@@ -1,11 +1,15 @@
 /* eslint-disable implicit-arrow-linebreak */
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { InternalAxiosRequestConfig } from 'axios';
 
 import { validateToken } from '@util/token.util';
 import { cookies, isProduction } from '@util/common.util';
 
-const requireApiList = [
-];
+type RequireApi = {
+  url: string;
+  method: string;
+};
+
+const requireApiList: RequireApi[] = [];
 
 export const baseUrl = isProduction ? 'https://prod-url.com/' : 'http://localhost:3000/';
 
@@ -20,7 +24,7 @@ const $axios = axios.create({
   maxBodyLength: 100 * 1024 * 1024,
 });
 
-$axios.interceptors.request.use(async (config: AxiosRequestConfig) => {
+$axios.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
   config.baseURL = baseUrl;
   const { url, method } = config;
   if (requireApiList.findIndex((api) => (url as string).indexOf(api.url) > -1 && api.method === method) > -1) {

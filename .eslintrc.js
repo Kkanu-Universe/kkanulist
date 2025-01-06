@@ -43,6 +43,11 @@ module.exports = {
     'no-underscore-dangle': 0,
     'operator-linebreak': 0,
     'no-param-reassign': 'off',
+    'eol-last': 0,
+    'no-confusing-arrow': 0,
+    'no-extra-semi': 0,
+    'no-unused-vars': 0,
+    '@typescript-eslint/no-unused-vars': 0,
   },
   ignorePatterns: ['.eslintrc.js', 'next.config.js', 'jest.config.js', 'jest.setup.js'],
   settings: {

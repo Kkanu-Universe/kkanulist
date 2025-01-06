@@ -41,8 +41,7 @@
       "@router/*": ["./routers/*"],
       "@hook/*": ["./hooks/*"],
       "@util/*": ["./utils/*"],
-      "@const/*": ["./consts/*"],
-      "@lib/*": ["./libs/*"]
+      "@const/*": ["./consts/*"]
     },
     "incremental": true,
     "experimentalDecorators": true,

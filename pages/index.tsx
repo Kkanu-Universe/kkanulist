@@ -1,3 +1,8 @@
-import { Redirect } from '@lib/redirect';
+const HOME = () => (
+  <div>
+    <h1>Home</h1>
+    <p>Welcome to the homepage!</p>
+  </div>
+);
 
-export default Redirect;
+export default HOME;

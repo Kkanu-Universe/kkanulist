@@ -49,9 +49,9 @@ export const cookies = {
       Date.now() + expTime,
     ).toUTCString()} ;path=/`;
   },
-  get: (key: string): string | null => {
+  get: (key: string): string | undefined => {
     const value = document.cookie.match(`(^|;) ?${key}=([^;]*)(;|$)`);
-    return value ? value[2] : null;
+    return value ? value[2] : undefined;
   },
   del: (key: string) => {
     document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;

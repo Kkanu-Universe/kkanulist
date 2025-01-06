@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { BtnStyle } from "@atom/Button";
+import { BtnStyle } from '@atom/Button';
 
 type Options = {
   label: string;
@@ -8,7 +8,7 @@ type Options = {
 
 type DropdownProps = {
   options: Options;
-}
+};
 
 const DropDownWrap = styled.button`
   position: relative;
@@ -17,11 +17,11 @@ const DropDownWrap = styled.button`
   &:hover > div {
     display: block;
   }
-`
+`;
 
 const Button = styled.div`
   ${BtnStyle}
-`
+`;
 
 const DropDownContentWrap = styled.div`
   display: none;
@@ -30,7 +30,7 @@ const DropDownContentWrap = styled.div`
   border-radius: var(--border-radius-default);
   min-width: 160px;
   z-index: 1;
-`
+`;
 
 const DropDownContent = styled.a`
   color: var(--color-white);
@@ -51,12 +51,10 @@ const DropDownContent = styled.a`
       border-bottom-left-radius: var(--border-radius-default);
     }
   }
-
-
-`
+`;
 
 // a 태그가 연결되어 있는 드롭다운 컴포넌트
-function DropDown({ options , ...rest }: DropdownProps){
+function DropDown({ options, ...rest }: DropdownProps) {
   return (
     <DropDownWrap>
       <Button> Dropdown btn </Button>
@@ -69,4 +67,4 @@ function DropDown({ options , ...rest }: DropdownProps){
   );
 }
 
-export default DropDown; 
+export default DropDown;

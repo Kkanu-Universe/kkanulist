@@ -54,7 +54,6 @@ const CheckBase = styled.input`
 `;
 
 function Check(checkProps: Omit<ICheckProps, 'type'>) {
-
   return (
     <CheckContainer>
       <CheckBase type='checkbox' {...checkProps} />

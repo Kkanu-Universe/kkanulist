@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import styled from '@emotion/styled';
-import { useAtom } from 'jotai';
+import { useAtomValue } from 'jotai';
 
 import type { IBtnProps } from '@atom/Button';
 import Button from '@atom/Button';
@@ -44,7 +44,7 @@ export const LoadingSpinner = styled.span<LoadingSpinnerProps>`
 const LoadingBtnWrap = styled.div``;
 
 function LoadingBtn({ msg, msgColor, child, size = 13, ...rest }: LoadingBtnProps) {
-  const [isLoading, setIsLoading] = useAtom(btnLoading);
+  const isLoading = useAtomValue(btnLoading);
 
   return (
     <LoadingBtnWrap>

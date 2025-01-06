@@ -1,4 +1,3 @@
-import $axios from '@util/axios.util';
 import { cookies, regex } from '@util/common.util';
 
 export type ParsedToken = {

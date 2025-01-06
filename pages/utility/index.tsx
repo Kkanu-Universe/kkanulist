@@ -6,6 +6,13 @@ import Switch from '@utility/Switch';
 import Checkbox from '@utility/Checkbox';
 import Accordion from '@utility/Accordion';
 
+const dropdownOptions = [
+  { label: 'home', link: '/index' },
+  { label: 'user', link: '/user' },
+  { label: 'kanu', link: '/kanu' },
+  { label: 'kkangu', link: '/kkangu' },
+];
+
 // ? 컴포넌트 모음집
 const Components = () => {
   const [isCheck, setIsCheck] = useState(false);
@@ -20,19 +27,13 @@ const Components = () => {
         checkProps={{ checked: isCheck, onChange: onSetIsCheck, id: 'checkbox' }}
         labelProps={{ htmlFor: 'checkbox', children: 'Checkbox' }}
       />
-      <div style={{ maxWidth: '500px'}}>
-        <Accordion />
+      <div style={{ maxWidth: '500px' }}>
+        <Accordion items={[{ key: 'a', title: 'a', content: '', isVisible: false }]} />
       </div>
-      <DropDown options={
-      [{label: 'home', link: '/index'},
-        {label: 'user', link: '/user'},
-        {label: 'kanu', link: '/kanu'},
-        {label: 'kkangu', link: '/kkangu'}
-      ]
-    } />
+      <DropDown options={dropdownOptions} />
     </div>
   );
-}
+};
 
 export default Components;
 
@@ -53,4 +54,4 @@ export default Components;
 // vite는 그걸 인식하고 script를 실행할게 해주고
 // react는 내부에서 src/index.tsx를 읽어와 페이지를 ㄹ렌더링합니당
 // 라우팅이 되어 있으니 각 라우팅에 맞게 소스코드를 불러와 렌더링해줍니당.
-// 헉 그렇군..! 
+// 헉 그렇군..!

@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
-import { useAtom } from 'jotai';
+import { memo } from 'react';
+import { useAtomValue } from 'jotai';
 
 import { LoadingSpinner } from '@block/LoadingBtn';
 
@@ -28,7 +28,7 @@ function ModalFooter({
   denyText = '거부',
   onDeny = () => {},
 }: ModalFooterProps) {
-  const [isLoading, setIsLoading] = useAtom(btnLoading);
+  const isLoading = useAtomValue(btnLoading);
 
   return (
     <ModalFooterWrap>

@@ -21,7 +21,7 @@ function App({ Component, pageProps }: AppProps) {
       setIsDarkMode(isDarkmode === '1');
       document.body.classList[isDarkmode === '1' ? 'add' : 'remove']('dark');
     }
-  }, []);
+  }, [setIsDarkMode]);
 
   return (
     <>

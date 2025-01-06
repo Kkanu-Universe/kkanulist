@@ -1,6 +1,6 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-confusing-arrow */
-import React, { memo } from 'react';
+import { memo } from 'react';
 import styled from '@emotion/styled';
 
 export interface SkeletonStyleProps {

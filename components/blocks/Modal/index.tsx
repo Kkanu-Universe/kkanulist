@@ -2,7 +2,7 @@ import React from 'react';
 import Swal, { SweetAlertOptions } from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
-interface ModalProps extends SweetAlertOptions {
+type ModalProps = SweetAlertOptions & {
   onReset?: () => void;
   children: React.ReactNode;
   showConfirmButton?: boolean;

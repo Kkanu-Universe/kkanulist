@@ -7,4 +7,4 @@ export interface ISwitchProps {
 
 export type ISwitchTextStyle = {
   checked: 'on' | 'off';
-}
+};

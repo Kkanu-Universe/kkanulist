@@ -4,7 +4,7 @@ import {
   AccordionHeader,
   AccordionTitle,
   AccordionButton,
-  AccordionContent
+  AccordionContent,
 } from './styles';
 import { IAccordionProps } from './types';
 

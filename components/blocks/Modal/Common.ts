@@ -15,7 +15,7 @@ export function serverError(
   });
 }
 
-export function expToken(timerInterval: string | number | NodeJS.Timer | undefined) {
+export function expToken(timerInterval: string | number | NodeJS.Timeout | undefined) {
   return Swal.fire({
     icon: 'error',
     title: '로그인',
@@ -37,7 +37,7 @@ export function expToken(timerInterval: string | number | NodeJS.Timer | undefin
   });
 }
 
-export function refreshLogin(timerInterval: string | number | NodeJS.Timer | undefined) {
+export function refreshLogin(timerInterval: string | number | NodeJS.Timeout | undefined) {
   return Swal.fire({
     icon: 'warning',
     title: '로그인',

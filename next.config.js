@@ -3,15 +3,13 @@ const { i18n } = require('./next-i18next.config');
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     unoptimized: true,
   },
   i18n,
   compiler: {
-    styledComponents: true,
-    ssr: true,
-    // ! 컴파일 할 때 console을 전부 지움
+    removeConsole: true,
+    emotion: true,
     // NOTE 만약 console.log 제외한 console을 전부 지우고 싶다면
     // removeConsole: {
     //   exclude: ['log'],
@@ -28,3 +26,5 @@ const nextConfig = {
   // }
   // },
 };
+
+module.exports = nextConfig;

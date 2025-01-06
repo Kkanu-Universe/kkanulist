@@ -15,7 +15,7 @@ function DarkModeSwitch() {
       return !prev;
     });
   };
-
+  
   return (
     <DarkModeSwitchConatiner>
       <Switch id='darkmode' checked={isDarkMode} text={isDarkMode ? <MoonIcon /> : <SunIcon />} onChange={onChangeDarkMode} />
