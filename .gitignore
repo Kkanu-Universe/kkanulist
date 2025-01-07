@@ -4,8 +4,11 @@ node_modules
 
 dist
 build
+out
 
 .*.env
 .git
 .swc
 .vscode
+.next
+yarn.lock
