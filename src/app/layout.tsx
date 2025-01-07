@@ -2,8 +2,6 @@
 
 import Layout from '@block/Layout';
 
-import '@const/globalStyles.css';
-
 interface IApp {
   children: React.ReactNode;
 }

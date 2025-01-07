@@ -27,11 +27,10 @@
     "jsxImportSource": "@emotion/react",
     "isolatedModules": true,
     "noImplicitAny": false,
-    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
       "@public/*": ["./public/*"],
+      "@/*": ["./src/*"],
       "@src/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@comp/*": ["./src/components/*"],
