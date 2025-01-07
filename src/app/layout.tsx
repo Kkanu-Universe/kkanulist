@@ -1,14 +1,10 @@
 'use client';
 
-import { AppProps } from 'next/app';
-import { appWithTranslation } from 'next-i18next';
-import nextI18nextConfig from '@/next-i18next.config';
-
 import Layout from '@block/Layout';
 
 import '@const/globalStyles.css';
 
-interface IApp extends AppProps {
+interface IApp {
   children: React.ReactNode;
 }
 
@@ -27,4 +23,4 @@ function AppLayout({ children }: IApp) {
   );
 }
 
-export default appWithTranslation(AppLayout, nextI18nextConfig);
+export default AppLayout;
