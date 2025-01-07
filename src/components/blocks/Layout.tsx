@@ -1,4 +1,5 @@
-'useclient'
+'use client';
+
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 import { useAtomValue } from 'jotai';

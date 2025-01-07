@@ -86,6 +86,6 @@ const theme: Theme = {
       zs: '0.75rem',
     },
   },
-}
+};
 
 export default theme;

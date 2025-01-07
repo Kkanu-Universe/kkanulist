@@ -7,7 +7,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  i18n,
   webpack: (config, _context) => {
     config.resolve.alias['jotai'] = resolve(__dirname, 'node_modules/jotai');
     return config;

@@ -16,7 +16,7 @@ const dropdownOptions = [
 ];
 
 // ? 컴포넌트 모음집
-const Components = () => {
+const Utility = () => {
   const [isCheck, setIsCheck] = useState(false);
 
   const onSetIsCheck = () => setIsCheck(!isCheck);
@@ -37,7 +37,7 @@ const Components = () => {
   );
 };
 
-export default Components;
+export default Utility;
 
 // 얜 뭐죠
 // 앤 왜 .jsx 이

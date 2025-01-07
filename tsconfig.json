@@ -33,7 +33,7 @@
       "@/*": ["./*"],
       "@public/*": ["./public/*"],
       "@src/*": ["./src/*"],
-      "@pages/*": ["./src/pages/*"],
+      "@app/*": ["./src/app/*"],
       "@comp/*": ["./src/components/*"],
       "@atom/*": ["./src/components/atoms/*"],
       "@block/*": ["./src/components/blocks/*"],

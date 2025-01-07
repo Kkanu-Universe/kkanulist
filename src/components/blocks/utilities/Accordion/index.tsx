@@ -8,7 +8,13 @@ import {
 } from './styles';
 import { IAccordionProps } from './types';
 
-function Accordion({ items = [{ title: 'title', content: 'content', key: 'first', isVisible: true }], onChange, firstVisible }: IAccordionProps) {
+function Accordion({
+  items = [
+    { title: 'title', content: 'content', key: 'first', isVisible: true },
+  ],
+  onChange,
+  firstVisible,
+}: IAccordionProps) {
   return (
     <AccordionContainer>
       {items.map(({ key, title, content, isVisible }, idx) => (

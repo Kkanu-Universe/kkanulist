@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "PORT=3000 NODE_ENV=development next dev",
+    "dev:init": "rm -rf .next && yarn dev",
     "start": "NODE_ENV=production next start",
     "build": "NODE_ENV=production next build",
     "export": "next export",
