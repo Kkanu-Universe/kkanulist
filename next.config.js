@@ -1,4 +1,5 @@
 const { i18n } = require('./next-i18next.config');
+const { resolve } = require('path');
 
 const nextConfig = {
   trailingSlash: true,
@@ -7,6 +8,10 @@ const nextConfig = {
     unoptimized: true,
   },
   i18n,
+  webpack: (config, _context) => {
+    config.resolve.alias['jotai'] = resolve(__dirname, 'node_modules/jotai');
+    return config;
+  },
   compiler: {
     removeConsole: true,
     emotion: true,

@@ -18,7 +18,7 @@ const SelectBoxWrap = styled.div`
   display: flex;
   align-items: center;
   background-color: var(--color-grey-90);
-  > *:first-child {
+  > *:first-of-type {
     margin-right: 10px;
   }
   border-radius: calc(4rem / 16);

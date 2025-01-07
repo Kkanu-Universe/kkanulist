@@ -41,12 +41,12 @@ const DropDownContent = styled.a`
   &:hover {
     background-color: var(--color-gray-3);
 
-    &:first-child{
+    &:first-of-type{
       border-top-right-radius: var(--border-radius-default);
       border-top-left-radius: var(--border-radius-default);
     }
 
-    &:last-child{
+    &:last-of-type{
       border-bottom-right-radius: var(--border-radius-default);
       border-bottom-left-radius: var(--border-radius-default);
     }

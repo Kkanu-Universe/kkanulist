@@ -5,7 +5,7 @@ import { BtnWrap } from '@atom/Button';
 export const ModalWrap = styled.div`
   & > * {
     margin-bottom: calc(20rem / 16);
-    &:last-child {
+    &:last-of-type {
       margin-bottom: 0;
     }
   }

@@ -42,10 +42,10 @@ export const SectionContainerWrap = styled.div<SectionContainerStyleProps>`
 `;
 
 export const SectionContentWrap = styled.div`
-  &:first-child {
+  &:first-of-type {
     padding-top: 0;
   }
-  &:last-child {
+  &:last-of-type {
     padding-bottom: 0;
   }
   padding: calc(5rem / 16) 0;
@@ -55,7 +55,7 @@ export const SectionContentWrap = styled.div`
       * {
         color: var(--color-grey-40);
       }
-      &:first-child {
+      &:first-of-type {
         padding-top: 0;
       }
     }
@@ -69,8 +69,8 @@ export const SectionContentWrap = styled.div`
     }
     ${MEDIA_QUERY.max('mobile')} {
       grid-template-columns: 1.7fr 1.4fr 0.9fr;
-      > div:last-child {
-        span:first-child {
+      > div:last-of-type {
+        span:first-of-type {
           display: none;
         }
         width: 100%;
@@ -78,7 +78,7 @@ export const SectionContentWrap = styled.div`
         overflow-x: auto;
       }
     }
-    &:last-child {
+    &:last-of-type {
       border-bottom: 0;
     }
   }

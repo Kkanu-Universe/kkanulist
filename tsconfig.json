@@ -32,16 +32,17 @@
     "paths": {
       "@/*": ["./*"],
       "@public/*": ["./public/*"],
-      "@comp/*": ["./components/*"],
-      "@atom/*": ["./components/atoms/*"],
-      "@block/*": ["./components/blocks/*"],
-      "@utility/*": ["./components/blocks/utilities/*"],
-      "@page/*": ["./pages/*"],
-      "@store/*": ["./stores/*"],
-      "@router/*": ["./routers/*"],
-      "@hook/*": ["./hooks/*"],
-      "@util/*": ["./utils/*"],
-      "@const/*": ["./consts/*"]
+      "@src/*": ["./src/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@comp/*": ["./src/components/*"],
+      "@atom/*": ["./src/components/atoms/*"],
+      "@block/*": ["./src/components/blocks/*"],
+      "@utility/*": ["./src/components/blocks/utilities/*"],
+      "@store/*": ["./src/stores/*"],
+      "@router/*": ["./src/routers/*"],
+      "@hook/*": ["./src/hooks/*"],
+      "@util/*": ["./src/utils/*"],
+      "@const/*": ["./src/consts/*"]
     },
     "incremental": true,
     "experimentalDecorators": true,
@@ -49,16 +50,22 @@
     "noUnusedLocals": true,
     "noUncheckedIndexedAccess": true,
     "outDir": "./dist",
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": ["node_modules"],
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "./@types/*",
+    "next-env.d.ts",
+    "next-i18next.config.js",
     "next.config.js",
     "server.js",
-    "@types/*",
-    "next-i18next.config.js"
+    ".next/types/**/*.ts"
   ]
 }

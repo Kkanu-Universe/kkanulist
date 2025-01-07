@@ -1,3 +1,5 @@
+'use client';
+
 const HOME = () => (
   <div>
     <h1>Home</h1>

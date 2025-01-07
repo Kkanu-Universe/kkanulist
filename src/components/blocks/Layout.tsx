@@ -1,5 +1,4 @@
-'use client';
-
+'useclient'
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 import { useAtomValue } from 'jotai';
@@ -41,7 +40,7 @@ const MainSectionWrap = styled.div`
   width: 100%;
   > * {
     margin: calc(20rem / 16);
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       margin-top: 0;
     }
   }
