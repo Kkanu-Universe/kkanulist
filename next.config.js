@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const { NODE_ENV, TYPE } = process.env;
 
 const nextConfig = {
+  output: 'export',
   trailingSlash: true,
   reactStrictMode: true,
   images: {
