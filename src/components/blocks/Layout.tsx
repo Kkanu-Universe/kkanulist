@@ -11,6 +11,8 @@ import MEDIA_QUERY from '@util/mediaQuery.util';
 // import Header from './Header';
 // import Footer from './Footer';
 
+import '@const/_globalStyles.css';
+
 type LayoutProps = {
   children: React.ReactNode | string;
 };

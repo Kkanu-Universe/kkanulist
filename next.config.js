@@ -1,4 +1,5 @@
 const { resolve } = require('path');
+const { NODE_ENV, TYPE } = process.env;
 
 const nextConfig = {
   output: 'export',
@@ -14,18 +15,21 @@ const nextConfig = {
   compiler: {
     removeConsole: true,
     emotion: true,
-    // NOTE 만약 console.log 제외한 console을 전부 지우고 싶다면
-    // removeConsole: {
-    //   exclude: ['log'],
-    // }
   },
-  // NOTE 크기가 방대한 라이브러리들을 불러올 때, 전부 불러오지 않고 필요한 부부만 불러오는 방법
-  // modularizeImports: {
-  //   lodash: {
-  //     transform: 'lodash/{{member}}',
-  //   }
-  // }
-  // },
 };
+
+if (NODE_ENV === 'production') {
+  nextConfig.compiler = {
+    ...nextConfig.compiler,
+    removeConsole: {
+      exclude: ['log'],
+    },
+  };
+  nextConfig.compress = true;
+}
+
+if (TYPE && TYPE === 'static') {
+  nextConfig.output = 'export';
+}
 
 module.exports = nextConfig;
